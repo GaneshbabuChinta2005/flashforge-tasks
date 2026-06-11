@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    font-family: 'Georgia', serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.quote-box {
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quote-content {
+    margin-bottom: 30px;
+}
+
+.quote-text {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-style: italic;
+    position: relative;
+    padding: 0 20px;
+}
+
+.quote-text::before {
+    content: '"';
+    font-size: 4rem;
+    color: #f5576c;
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    opacity: 0.3;
+}
+
+.quote-author {
+    text-align: right;
+    font-size: 1.2rem;
+    color: #666;
+    font-style: normal;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(245, 87, 108, 0.4);
+}
+
+.btn-twitter {
+    background: #1DA1F2;
+    color: white;
+}
+
+.btn-twitter:hover {
+    background: #1a8cd8;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(29, 161, 242, 0.4);
+}
+
+@media (max-width: 600px) {
+    .quote-box {
+        padding: 30px;
+    }
+
+    .quote-text {
+        font-size: 1.4rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
