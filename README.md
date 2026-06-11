@@ -4,8 +4,17 @@ A collection of interactive web projects built with HTML, CSS, and JavaScript.
 
 ## 🚀 Live Demos
 
-- **Digital Clock:** [View Live Demo](https://ganeshbabuchinta2005.github.io/flashforge-tasks/digital-clock/)
-- **Quote Generator:** [View Live Demo](https://ganeshbabuchinta2005.github.io/flashforge-tasks/quote-generator/)
+### Vercel Deployments
+- **Digital Clock:** [https://digital-clock-phi-orpin.vercel.app/](https://digital-clock-phi-orpin.vercel.app/)
+- **Quote Generator:** [https://build-a-quote-generator.vercel.app/](https://build-a-quote-generator.vercel.app/)
+
+### GitHub Pages
+- **Digital Clock:** [https://ganeshbabuchinta2005.github.io/flashforge-tasks/digital-clock/](https://ganeshbabuchinta2005.github.io/flashforge-tasks/digital-clock/)
+- **Quote Generator:** [https://ganeshbabuchinta2005.github.io/flashforge-tasks/quote-generator/](https://ganeshbabuchinta2005.github.io/flashforge-tasks/quote-generator/)
+
+## 📚 Related Repositories
+
+- **[build-a-quote-generator](https://github.com/GaneshbabuChinta2005/build-a-quote-generator-)** - Standalone quote generator repository
 
 ## Projects
 
@@ -22,7 +31,7 @@ A real-time digital clock displaying current time and date.
 **How to use:**
 1. Open `digital-clock/index.html` in your browser
 2. The clock updates automatically every second
-3. Or [View Live Demo](https://ganeshbabuchinta2005.github.io/flashforge-tasks/digital-clock/)
+3. Or [View Live Demo on Vercel](https://digital-clock-phi-orpin.vercel.app/)
 
 ### 2. Quote Generator
 An inspirational quote generator with multiple features.
@@ -40,7 +49,7 @@ An inspirational quote generator with multiple features.
 2. Click "New Quote" to get a random quote
 3. Use "Copy" to copy the quote to your clipboard
 4. Use "Tweet" to share the quote on Twitter
-5. Or [View Live Demo](https://ganeshbabuchinta2005.github.io/flashforge-tasks/quote-generator/)
+5. Or [View Live Demo on Vercel](https://build-a-quote-generator.vercel.app/)
 
 ## Technologies Used
 - HTML5
@@ -59,6 +68,10 @@ An inspirational quote generator with multiple features.
 1. Clone the repository
 2. Navigate to the project folder (`digital-clock` or `quote-generator`)
 3. Open `index.html` in your web browser
+
+## Deployment
+
+Both projects are deployed on Vercel for instant access and automatic updates.
 
 ## License
 Open source - Feel free to use and modify!
