@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 100%;
+    max-width: 480px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Preview */
+.preview-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.color-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s;
+}
+
+/* Hide the native color input, use label as button */
+#color-input {
+    display: none;
+}
+
+.pick-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: linear-gradient(135deg, #00ff88, #00ccff);
+    color: #1a1a2e;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    letter-spacing: 1px;
+}
+
+.pick-btn:hover {
+    opacity: 0.85;
+}
+
+/* Color code rows */
+.codes {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.code-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.code-label {
+    color: #00ff88;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 0.85rem;
+    min-width: 36px;
+    text-align: left;
+}
+
+.code-value {
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    flex: 1;
+    text-align: left;
+    word-break: break-all;
+}
+
+.copy-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Sliders */
+.sliders {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.slider-group label {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.slider {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.slider.red   { accent-color: #ff4d4d; }
+.slider.green { accent-color: #00ff88; }
+.slider.blue  { accent-color: #4da6ff; }
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.slider.red   { background: linear-gradient(to right, #000, #ff4d4d); }
+.slider.green { background: linear-gradient(to right, #000, #00ff88); }
+.slider.blue  { background: linear-gradient(to right, #000, #4da6ff); }
+
+/* Recent palette */
+.palette-section {
+    margin-bottom: 10px;
+}
+
+.palette-title {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: transform 0.15s, border-color 0.15s;
+    flex-shrink: 0;
+}
+
+.swatch:hover {
+    transform: scale(1.15);
+    border-color: white;
+}
+
+/* Copy message */
+.copy-msg {
+    color: #00ff88;
+    margin-top: 16px;
+    font-size: 0.9rem;
+    min-height: 1.2em;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.copy-msg.show {
+    opacity: 1;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .color-preview {
+        width: 90px;
+        height: 90px;
+    }
+}

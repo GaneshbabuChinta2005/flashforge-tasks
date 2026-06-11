@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Picker Tool</h1>
+
+        <!-- Color preview + native picker -->
+        <div class="preview-box">
+            <div class="color-preview" id="color-preview"></div>
+            <input type="color" id="color-input" value="#667eea">
+            <label for="color-input" class="pick-btn">Pick a Color</label>
+        </div>
+
+        <!-- Color codes -->
+        <div class="codes">
+            <div class="code-row">
+                <span class="code-label">HEX</span>
+                <span class="code-value" id="hex-value">#667EEA</span>
+                <button class="copy-btn" data-target="hex-value">Copy</button>
+            </div>
+            <div class="code-row">
+                <span class="code-label">RGB</span>
+                <span class="code-value" id="rgb-value">rgb(102, 126, 234)</span>
+                <button class="copy-btn" data-target="rgb-value">Copy</button>
+            </div>
+            <div class="code-row">
+                <span class="code-label">HSL</span>
+                <span class="code-value" id="hsl-value">hsl(231, 77%, 66%)</span>
+                <button class="copy-btn" data-target="hsl-value">Copy</button>
+            </div>
+        </div>
+
+        <!-- Sliders -->
+        <div class="sliders">
+            <div class="slider-group">
+                <label>R <span id="r-val">102</span></label>
+                <input type="range" id="r-slider" min="0" max="255" value="102" class="slider red">
+            </div>
+            <div class="slider-group">
+                <label>G <span id="g-val">126</span></label>
+                <input type="range" id="g-slider" min="0" max="255" value="126" class="slider green">
+            </div>
+            <div class="slider-group">
+                <label>B <span id="b-val">234</span></label>
+                <input type="range" id="b-slider" min="0" max="255" value="234" class="slider blue">
+            </div>
+        </div>
+
+        <!-- Palette history -->
+        <div class="palette-section">
+            <span class="palette-title">Recent Colors</span>
+            <div class="palette" id="palette"></div>
+        </div>
+
+        <p class="copy-msg" id="copy-msg">Copied!</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

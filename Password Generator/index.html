@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+
+        <div class="output-box">
+            <span id="password-display">Click Generate</span>
+            <button class="copy-btn" id="copy-btn" title="Copy to clipboard">&#x2602;</button>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="length">Password Length: <span id="length-value">16</span></label>
+                <input type="range" id="length" min="6" max="64" value="16">
+            </div>
+
+            <div class="checkboxes">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="uppercase" checked>
+                    Uppercase (A–Z)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="lowercase" checked>
+                    Lowercase (a–z)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="numbers" checked>
+                    Numbers (0–9)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="symbols">
+                    Symbols (!@#$...)
+                </label>
+            </div>
+        </div>
+
+        <div class="strength-box">
+            <span>Strength:</span>
+            <div class="strength-bars">
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div>
+                <div class="bar" id="bar4"></div>
+            </div>
+            <span id="strength-label">—</span>
+        </div>
+
+        <button class="generate-btn" id="generate-btn">Generate Password</button>
+        <p class="copy-msg" id="copy-msg">Copied to clipboard!</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
