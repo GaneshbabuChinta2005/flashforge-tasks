@@ -2,6 +2,11 @@
 
 A collection of interactive web projects built with HTML, CSS, and JavaScript.
 
+## 🚀 Live Demos
+
+- **Digital Clock:** [View Live Demo](https://ganeshbabuchinta2005.github.io/flashforge-tasks/digital-clock/)
+- **Quote Generator:** [View Live Demo](https://ganeshbabuchinta2005.github.io/flashforge-tasks/quote-generator/)
+
 ## Projects
 
 ### 1. Digital Clock
@@ -17,6 +22,7 @@ A real-time digital clock displaying current time and date.
 **How to use:**
 1. Open `digital-clock/index.html` in your browser
 2. The clock updates automatically every second
+3. Or [View Live Demo](https://ganeshbabuchinta2005.github.io/flashforge-tasks/digital-clock/)
 
 ### 2. Quote Generator
 An inspirational quote generator with multiple features.
@@ -34,6 +40,7 @@ An inspirational quote generator with multiple features.
 2. Click "New Quote" to get a random quote
 3. Use "Copy" to copy the quote to your clipboard
 4. Use "Tweet" to share the quote on Twitter
+5. Or [View Live Demo](https://ganeshbabuchinta2005.github.io/flashforge-tasks/quote-generator/)
 
 ## Technologies Used
 - HTML5
