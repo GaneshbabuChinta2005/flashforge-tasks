@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+
+        <!-- Unit toggle -->
+        <div class="toggle-group">
+            <button class="toggle-btn active" id="btn-metric">Metric</button>
+            <button class="toggle-btn" id="btn-imperial">Imperial</button>
+        </div>
+
+        <!-- Inputs -->
+        <div class="inputs" id="metric-inputs">
+            <div class="input-group">
+                <label for="height-cm">Height</label>
+                <div class="input-row">
+                    <input type="number" id="height-cm" placeholder="0" min="1" max="300">
+                    <span class="unit">cm</span>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="weight-kg">Weight</label>
+                <div class="input-row">
+                    <input type="number" id="weight-kg" placeholder="0" min="1" max="500">
+                    <span class="unit">kg</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="inputs hidden" id="imperial-inputs">
+            <div class="input-group">
+                <label>Height</label>
+                <div class="input-row">
+                    <input type="number" id="height-ft" placeholder="0" min="1" max="9">
+                    <span class="unit">ft</span>
+                    <input type="number" id="height-in" placeholder="0" min="0" max="11">
+                    <span class="unit">in</span>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="weight-lbs">Weight</label>
+                <div class="input-row">
+                    <input type="number" id="weight-lbs" placeholder="0" min="1" max="1000">
+                    <span class="unit">lbs</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="calculate-btn" id="calculate-btn">Calculate BMI</button>
+
+        <!-- Result -->
+        <div class="result-box" id="result-box">
+            <div class="bmi-value" id="bmi-value">--</div>
+            <div class="bmi-category" id="bmi-category">Enter your details above</div>
+            <div class="bmi-bar-wrap">
+                <div class="bmi-bar">
+                    <div class="bmi-marker" id="bmi-marker"></div>
+                    <div class="segment underweight"></div>
+                    <div class="segment normal"></div>
+                    <div class="segment overweight"></div>
+                    <div class="segment obese"></div>
+                </div>
+                <div class="bar-labels">
+                    <span>Underweight</span>
+                    <span>Normal</span>
+                    <span>Overweight</span>
+                    <span>Obese</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reference table -->
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>BMI Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-underweight"><td>Underweight</td><td>&lt; 18.5</td></tr>
+                    <tr class="row-normal"><td>Normal weight</td><td>18.5 – 24.9</td></tr>
+                    <tr class="row-overweight"><td>Overweight</td><td>25 – 29.9</td></tr>
+                    <tr class="row-obese"><td>Obese</td><td>&ge; 30</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
